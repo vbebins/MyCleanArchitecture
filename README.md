@@ -21,6 +21,6 @@ License
 Distributed under the MIT License. See LICENSE for more information.
 
 Contact
-Your Name - email@example.com
+Your Name - vbebins@gmail.com
 
 Project Link: (https://github.com/vbebins/MyCleanArchitecture
