@@ -8,6 +8,7 @@ namespace MyCleanArchitecture.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        //Index Controller
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
