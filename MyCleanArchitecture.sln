@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{265104E0-502E-49C6-8183-1D049EEAE9E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCleanArchitecture.API", "Client\MyCleanArchitecture.API\MyCleanArchitecture.API.csproj", "{CC99FA64-8189-40CA-B201-DD592562027D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCleanArchitecture.API", "Client\MyCleanArchitecture.API\MyCleanArchitecture.API.csproj", "{CC99FA64-8189-40CA-B201-DD592562027D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{CE1F52C2-CEE4-4B07-A74B-AE2A50150FC9}"
 EndProject
@@ -13,9 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCleanArchitecture.Web", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KafkaServices", "KafkaServices", "{756ECC38-7E46-4925-9BA8-965A15ECBB65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaProducer.API", "KafkaServices\KafkaProducer.API\KafkaProducer.API.csproj", "{79959F70-093E-4279-8BFF-F87323F1F97C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaProducer.API", "KafkaServices\KafkaProducer.API\KafkaProducer.API.csproj", "{79959F70-093E-4279-8BFF-F87323F1F97C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaConsumer.API", "KafkaServices\KafkaConsumer.API\KafkaConsumer.API.csproj", "{E0B77316-5799-46F9-8451-F12F3C03FD2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafkaConsumer.API", "KafkaServices\KafkaConsumer.API\KafkaConsumer.API.csproj", "{E0B77316-5799-46F9-8451-F12F3C03FD2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCleanArchitecture.Core", "Libraries\MyCleanArchitecture.Core\MyCleanArchitecture.Core.csproj", "{2AC73E26-3B4C-408E-9AB4-99654DA2EA1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCleanArchitecture.EFCore", "Libraries\MyCleanArchitecture.EFCore\MyCleanArchitecture.EFCore.csproj", "{1C76AB43-3E6A-4B12-86BA-87D9CA12D2F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{E0B77316-5799-46F9-8451-F12F3C03FD2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0B77316-5799-46F9-8451-F12F3C03FD2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0B77316-5799-46F9-8451-F12F3C03FD2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AC73E26-3B4C-408E-9AB4-99654DA2EA1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AC73E26-3B4C-408E-9AB4-99654DA2EA1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AC73E26-3B4C-408E-9AB4-99654DA2EA1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AC73E26-3B4C-408E-9AB4-99654DA2EA1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C76AB43-3E6A-4B12-86BA-87D9CA12D2F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C76AB43-3E6A-4B12-86BA-87D9CA12D2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C76AB43-3E6A-4B12-86BA-87D9CA12D2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C76AB43-3E6A-4B12-86BA-87D9CA12D2F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +60,8 @@ Global
 		{2EE91497-70C1-4B78-9EC6-F663C6810475} = {265104E0-502E-49C6-8183-1D049EEAE9E4}
 		{79959F70-093E-4279-8BFF-F87323F1F97C} = {756ECC38-7E46-4925-9BA8-965A15ECBB65}
 		{E0B77316-5799-46F9-8451-F12F3C03FD2E} = {756ECC38-7E46-4925-9BA8-965A15ECBB65}
+		{2AC73E26-3B4C-408E-9AB4-99654DA2EA1C} = {CE1F52C2-CEE4-4B07-A74B-AE2A50150FC9}
+		{1C76AB43-3E6A-4B12-86BA-87D9CA12D2F3} = {CE1F52C2-CEE4-4B07-A74B-AE2A50150FC9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {701B8D64-F506-4450-B1DA-507CAC3ABD70}
