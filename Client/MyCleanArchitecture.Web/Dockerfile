@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["MyCleanArchitecture/MyCleanArchitecture.csproj", "MyCleanArchitecture/"]
-RUN dotnet restore "MyCleanArchitecture/MyCleanArchitecture.csproj"
+COPY ["MyCleanArchitecture.Web.csproj", "."]
+RUN dotnet restore "./MyCleanArchitecture.Web.csproj"
 COPY . .
-WORKDIR "/src/MyCleanArchitecture"
-RUN dotnet build "MyCleanArchitecture.csproj" -c Release -o /app/build
+WORKDIR "/src/."
+RUN dotnet build "MyCleanArchitecture.Web.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "MyCleanArchitecture.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "MyCleanArchitecture.Web.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "MyCleanArchitecture.dll"]
+ENTRYPOINT ["dotnet", "MyCleanArchitecture.Web.dll"]

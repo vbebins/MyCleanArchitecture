@@ -1,7 +1,19 @@
+using WatchDog;
+using WatchDog.src.Enums;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddWatchDogServices(opt =>
+{
+    opt.IsAutoClear = true;
+    opt.ClearTimeSchedule = WatchDogAutoClearScheduleEnum.Monthly;
+});
+
+builder.Logging.AddWatchDogLogger();
+
 
 var app = builder.Build();
 
@@ -20,6 +32,12 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseWatchDog(opt =>
+{
+    opt.WatchPageUsername = "admin";
+    opt.WatchPagePassword = "bebinstest@123";
+});
 
 app.MapControllerRoute(
     name: "default",

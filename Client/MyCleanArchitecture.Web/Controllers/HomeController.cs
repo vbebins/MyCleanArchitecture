@@ -16,6 +16,7 @@ namespace MyCleanArchitecture.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Logger Test");
             return View();
         }
 
