@@ -24,3 +24,6 @@ Contact
 Your Name - vbebins@gmail.com
 
 Project Link: (https://github.com/vbebins/MyCleanArchitecture
+
+Watchdog.Net Screen
+![image](https://user-images.githubusercontent.com/49632107/231620126-09cce8c5-8a06-41d9-8055-b1b717ae72ed.png)
